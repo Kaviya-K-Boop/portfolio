@@ -2,601 +2,1042 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Kaviya | Software Developer</title>
+<meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
+<title>Kaviya Kannappan | Software Developer</title>
 
-    body {
-      background: #0f172a;
-      color: white;
-      overflow-x: hidden;
-    }
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-    /* Scrollbar */
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-    ::-webkit-scrollbar-thumb {
-      background: #00f7ff;
-      border-radius: 10px;
-    }
+<style>
 
-    /* Navbar */
+*{
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 
-    nav h1 {
-      color: #00f7ff;
-      font-size: 28px;
-    }
+}
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 30px;
-    }
+body{
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-      font-weight: 500;
-    }
+background:#0f172a;
+color:white;
+overflow-x:hidden;
 
-    nav ul li a:hover {
-      color: #00f7ff;
-    }
+}
 
-    /* Hero Section */
+::-webkit-scrollbar{
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 100px 10%;
-      gap: 60px;
-      flex-wrap: wrap;
-    }
+width:8px;
 
-    .hero-text {
-      flex: 1;
-    }
+}
 
-    .hero-text h3 {
-      font-size: 30px;
-      color: #00f7ff;
-    }
+::-webkit-scrollbar-thumb{
 
-    .hero-text h1 {
-      font-size: 65px;
-      margin: 10px 0;
-    }
+background:#00f7ff;
+border-radius:20px;
 
-    .hero-text h2 {
-      font-size: 35px;
-      color: #cbd5e1;
-      height: 50px;
-    }
+}
 
-    .hero-text p {
-      margin-top: 20px;
-      line-height: 1.8;
-      color: #cbd5e1;
-      max-width: 600px;
-    }
+nav{
 
-    .btns {
-      margin-top: 30px;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:999;
 
-    .btn {
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      background: #00f7ff;
-      color: black;
-      font-weight: 600;
-      transition: 0.3s;
-    }
+}
 
-    .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px #00f7ff;
-    }
+.logo{
 
-    /* Hero Image */
+font-size:30px;
+font-weight:700;
+color:#00f7ff;
 
-    .hero-img {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
+}
 
-    .hero-img img {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #00f7ff;
-      box-shadow: 0 0 40px #00f7ff;
-      animation: float 3s ease-in-out infinite;
-    }
+nav ul{
 
-    @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
+display:flex;
+gap:30px;
+list-style:none;
 
-      50% {
-        transform: translateY(-20px);
-      }
+}
 
-      100% {
-        transform: translateY(0);
-      }
-    }
+nav ul li a{
 
-    /* Sections */
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
 
-    section {
-      padding: 100px 10%;
-    }
+}
 
-    .title {
-      text-align: center;
-      font-size: 40px;
-      margin-bottom: 50px;
-      color: #00f7ff;
-    }
+nav ul li a:hover{
 
-    /* About */
+color:#00f7ff;
 
-    .about {
-      text-align: center;
-      line-height: 2;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
+}
 
-    /* Skills */
+section{
 
-    .skills-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
+padding:100px 8%;
 
-    .skill-card {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      transition: 0.3s;
-    }
+}
 
-    .skill-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 20px #00f7ff;
-    }
+.hero{
 
-    .skill-card h2 {
-      color: #00f7ff;
-      margin-bottom: 10px;
-    }
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:70px;
+flex-wrap:wrap;
 
-    /* Projects */
+}
 
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
+.hero-text{
 
-    .project-card {
-      background: #1e293b;
-      border-radius: 20px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
+flex:1;
 
-    .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px #00f7ff;
-    }
+}
 
-    .project-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
+.hero-text h3{
 
-    .project-content {
-      padding: 20px;
-    }
+font-size:28px;
+color:#00f7ff;
 
-    .project-content h3 {
-      color: #00f7ff;
-      margin-bottom: 10px;
-    }
+}
 
-    .project-content p {
-      color: #cbd5e1;
-      line-height: 1.7;
-    }
+.hero-text h1{
 
-    /* Contact */
+font-size:65px;
+margin:10px 0;
 
-    .contact {
-      text-align: center;
-    }
+}
 
-    .contact p {
-      margin: 10px 0;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
+.hero-text h2{
 
-    .socials {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+font-size:35px;
+height:50px;
+color:#cbd5e1;
 
-    .socials a {
-      text-decoration: none;
-      color: white;
-      background: #1e293b;
-      padding: 12px 22px;
-      border-radius: 30px;
-      transition: 0.3s;
-    }
+}
 
-    .socials a:hover {
-      background: #00f7ff;
-      color: black;
-    }
+.hero-text p{
 
-    /* Footer */
+margin-top:20px;
+line-height:1.8;
+color:#cbd5e1;
+max-width:600px;
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #94a3b8;
-    }
+}
 
-    /* Responsive */
+.btns{
 
-    @media(max-width:768px) {
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
+}
 
-      nav ul {
-        gap: 15px;
-      }
+.btn{
 
-      .hero-text h1 {
-        font-size: 45px;
-      }
+padding:13px 30px;
+background:#00f7ff;
+color:#000;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
 
-      .hero-text h2 {
-        font-size: 24px;
-      }
+}
 
-      .hero-img img {
-        width: 260px;
-        height: 260px;
-      }
-    }
-  </style>
+.btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 20px #00f7ff;
+
+}
+
+.hero-img{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.hero-img img{
+
+width:340px;
+height:340px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #00f7ff;
+box-shadow:0 0 40px #00f7ff;
+animation:float 3s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#00f7ff;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:2;
+font-size:18px;
+color:#cbd5e1;
+}
+
+.skills-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.skill-card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00f7ff;
+}
+
+.skill-card h2{
+color:#00f7ff;
+margin-bottom:10px;
+}
+
+.projects-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #00f7ff;
+}
+
+.project-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.project-content{
+padding:20px;
+}
+
+.project-content h3{
+color:#00f7ff;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+color:#cbd5e1;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.socials a{
+padding:12px 22px;
+text-decoration:none;
+background:#1e293b;
+color:white;
+border-radius:30px;
+transition:.3s;
+}
+
+.socials a:hover{
+background:#00f7ff;
+color:black;
+}
+
+footer{
+padding:20px;
+text-align:center;
+background:#020617;
+color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+gap:15px;
+flex-wrap:wrap;
+}
+
+.hero-text h1{
+font-size:45px;
+}
+
+.hero-text h2{
+font-size:24px;
+}
+
+.hero-img img{
+width:260px;
+height:260px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <!-- Navbar -->
+<nav>
 
-  <nav>
+<div class="logo">
+Kaviya
+</div>
 
-    <h1>Kaviya</h1>
+<ul>
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<li><a href="#home">Home</a></li>
 
-  </nav>
+<li><a href="#about">About</a></li>
 
-  <!-- Hero Section -->
+<li><a href="#skills">Skills</a></li>
 
-  <section class="hero" id="home">
+<li><a href="#internship">Internship</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero" id="home">
 
     <div class="hero-text">
 
-      <h3>Hello, It's Me</h3>
+        <h3>Hello, It's Me 👋</h3>
 
-      <h1>Kaviya</h1>
+        <h1>Kaviya Kannappan</h1>
 
-      <h2 id="typing"></h2>
+        <h2 id="typing"></h2>
 
-      <p>
-        Passionate Computer Science and Engineering student interested
-        in software development, UI/UX design, and problem solving.
-      </p>
+        <p>
+            Motivated Computer Science and Engineering student passionate
+            about Software Development, Java, Python and UI/UX Design.
+            I enjoy building responsive web applications and continuously
+            improving my problem-solving skills.
+        </p>
 
-      <div class="btns">
+        <div class="btns">
+            
+            <a href="Kaviya_Kannappan (3).pdf"
+              class="btn"
+              target="_blank">
 
-        <a href="Kaviya_Kannappan (2).pdf" class="btn" download>
-          Download Resume
-        </a>
+              View Resume
 
-        <a href="#contact" class="btn">
-          Contact Me
-        </a>
+            </a>
 
-      </div>
+            <a href="#contact"
+               class="btn">
+
+               Contact Me
+
+            </a>
+
+        </div>
 
     </div>
 
     <div class="hero-img">
 
-      <img src="ChatGPT Image May 19, 2026, 06_48_53 PM.png"
-        alt="profile">
+        <img src="ChatGPT Image May 19, 2026, 06_48_53 PM.png"
+             alt="Kaviya">
 
     </div>
 
-  </section>
+</section>
+<!-- ================= ABOUT ================= -->
 
-  <!-- About -->
+<section id="about">
 
-  <section id="about">
+<h1 class="title">
 
-    <h1 class="title">About Me</h1>
+About Me
 
-    <div class="about">
+</h1>
 
-      <p>
-        Motivated Computer Science and Engineering student seeking
-        opportunities to apply technical and problem-solving skills.
-      </p>
+<div class="about">
 
-      <p>
-        Skilled in Java, Python, C Programming,
-        OOPs, Data Structures, DBMS, GitHub, and UI/UX Design.
-      </p>
+<p>
 
-    </div>
+Hello! I'm <b style="color:#00f7ff;">Kaviya Kannappan</b>,
+a Computer Science and Engineering student from
+<b>Mailam Engineering College.</b>
 
-  </section>
+</p>
 
-  <!-- Skills -->
+<br>
 
-  <section id="skills">
+<p>
 
-    <h1 class="title">Skills</h1>
+I am passionate about Software Development,
+Java Programming,
+Python Programming,
+Web Development,
+UI/UX Design and Problem Solving.
 
-    <div class="skills-container">
+</p>
 
-      <div class="skill-card">
-        <h2>Java</h2>
-        <p>OOPs & Application Development</p>
-      </div>
+<br>
 
-      <div class="skill-card">
-        <h2>Python</h2>
-        <p>Automation & Problem Solving</p>
-      </div>
+<p>
 
-      <div class="skill-card">
-        <h2>C Programming</h2>
-        <p>Logic Building & Fundamentals</p>
-      </div>
+I love learning new technologies,
+building innovative projects and improving
+my programming knowledge every day.
 
-      <div class="skill-card">
-        <h2>DBMS</h2>
-        <p>Database Management</p>
-      </div>
+</p>
 
-      <div class="skill-card">
-        <h2>GitHub</h2>
-        <p>Version Control & Projects</p>
-      </div>
+</div>
 
-      <div class="skill-card">
-        <h2>UI/UX Design</h2>
-        <p>Figma & Adobe XD</p>
-      </div>
+</section>
+<!-- ================= TECHNICAL SKILLS ================= -->
 
-    </div>
+<section id="skills">
 
-  </section>
+<h1 class="title">Technical Skills</h1>
 
-  <!-- Projects -->
+<div class="skills-container">
 
-  <section id="projects">
+<div class="skill-card">
+<h2>Java</h2>
+<p>Object Oriented Programming & Application Development</p>
+</div>
 
-    <h1 class="title">Projects</h1>
+<div class="skill-card">
+<h2>Python</h2>
+<p>Automation & Problem Solving</p>
+</div>
 
-    <div class="projects-container">
+<div class="skill-card">
+<h2>C Programming</h2>
+<p>Programming Fundamentals</p>
+</div>
 
-      <!-- Project 1 -->
+<div class="skill-card">
+<h2>HTML5</h2>
+<p>Responsive Web Development</p>
+</div>
 
-      <div class="project-card">
+<div class="skill-card">
+<h2>CSS3</h2>
+<p>Modern UI Design</p>
+</div>
 
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-          alt="project">
+<div class="skill-card">
+<h2>JavaScript</h2>
+<p>Interactive Web Applications</p>
+</div>
 
-        <div class="project-content">
+<div class="skill-card">
+<h2>DBMS</h2>
+<p>Database Management Systems</p>
+</div>
 
-          <h3>Mental Healthcare Application</h3>
+<div class="skill-card">
+<h2>Git & GitHub</h2>
+<p>Version Control & Project Management</p>
+</div>
 
-          <p>
-            Developed a platform with mood tracker and AI chatbot
-            for supporting mental well-being and emotional health.
-          </p>
+<div class="skill-card">
+<h2>Data Structures</h2>
+<p>Efficient Problem Solving</p>
+</div>
 
-        </div>
+<div class="skill-card">
+<h2>OOP</h2>
+<p>Object Oriented Programming Concepts</p>
+</div>
 
-      </div>
+<div class="skill-card">
+<h2>UI / UX Design</h2>
+<p>Figma & Adobe XD</p>
+</div>
 
-      <!-- Project 2 -->
+<div class="skill-card">
+<h2>Problem Solving</h2>
+<p>Logical Thinking & Coding</p>
+</div>
 
-      <div class="project-card">
+</div>
 
-        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
-          alt="project">
+</section>
 
-        <div class="project-content">
+<!-- ================= INTERNSHIP ================= -->
 
-          <h3>Coffee Menu UI/UX Design</h3>
+<section id="internship">
 
-          <p>
-            Designed a modern coffee shop menu interface inspired by
-            KFC-style digital menu boards using Figma and Adobe XD.
-          </p>
+<h1 class="title">Internship</h1>
 
-        </div>
+<div class="skills-container">
 
-      </div>
+<div class="skill-card">
 
-      <!-- Project 3 -->
+<h2>UI/UX Design Intern</h2>
 
-      <div class="project-card">
+<h3 style="color:#00f7ff;margin-top:10px;">
+Aspivox Technologies
+</h3>
 
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop"
-          alt="project">
+<br>
 
-        <div class="project-content">
+<p>
 
-          <h3>Smart Grocery Inventory System</h3>
+Designed responsive user interfaces using Figma and Adobe XD.
+Worked on wireframes, prototypes, user experience improvements,
+and modern UI design principles.
 
-          <p>
-            Developed an intelligent grocery inventory management system
-            to manage products, stock availability, and inventory updates.
-          </p>
+</p>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</section>
+<!-- ================= PROJECTS ================= -->
 
-  </section>
+<section id="projects">
 
-  <!-- Contact -->
+<h1 class="title">Projects</h1>
 
-  <section id="contact">
+<div class="projects-container">
 
-    <h1 class="title">Contact Me</h1>
+<!-- Project 1 -->
 
-    <div class="contact">
+<div class="project-card">
 
-      <p>Email: dkaviya69@gmail.com</p>
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+alt="Sentiment Analysis">
 
-      <p>Location: Tindivanam, Tamil Nadu</p>
+<div class="project-content">
 
-      <p>Phone: +91 7604890394</p>
+<h3>Sentiment Analysis Using Python</h3>
 
-      <div class="socials">
+<p>
+Developed an NLP-based application to analyze customer reviews
+and classify them as Positive, Negative, or Neutral using Python.
+</p>
 
-        <a href="https://github.com/Kaviya-K-Boop"
-          target="_blank">
-          GitHub
-        </a>
+<br>
 
-        <a href="https://linkedin.com/in/kaviya-kannappan-7919403a3"
-          target="_blank">
-          LinkedIn
-        </a>
 
-      </div>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
-  <!-- Footer -->
+<!-- Project 2 -->
 
-  <footer>
-    © 2026 Kaviya | Software Developer
-  </footer>
+<div class="project-card">
 
-  <!-- JavaScript -->
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+alt="Resume Analysis">
 
-  <script>
+<div class="project-content">
 
-    const text = [
-      "Software Developer",
-      "Java Developer",
-      "Python Developer",
-      "UI/UX Designer"
-    ];
+<h3>Resume Analysis Using Python</h3>
 
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
+<p>
+Developed a Resume Analyzer that extracts skills,
+analyzes resumes, and provides useful suggestions.
+</p>
 
-    (function type() {
+<br>
 
-      if (count === text.length) {
-        count = 0;
-      }
 
-      currentText = text[count];
-      letter = currentText.slice(0, ++index);
+</div>
 
-      document.getElementById("typing").textContent = letter;
+</div>
 
-      if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-      }
+<!-- Project 3 -->
 
-      setTimeout(type, 150);
+<div class="project-card">
 
-    })();
+<img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1200&auto=format&fit=crop"
+alt="Weather App">
 
-  </script>
+<div class="project-content">
+
+<h3>Weather Application</h3>
+
+<p>
+Created a responsive weather application using
+HTML, CSS, JavaScript, and Weather API.
+</p>
+
+<br>
+
+
+</div>
+
+</div>
+
+<!-- Project 4 -->
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+alt="Coffee Menu UI">
+
+<div class="project-content">
+
+<h3>Coffee Menu UI/UX Design</h3>
+
+<p>
+Designed a modern Coffee Shop Menu inspired by
+KFC digital menu boards using Figma and Adobe XD.
+</p>
+
+<br>
+
+
+</div>
+
+</div>
+
+<!-- Project 5 -->
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200&auto=format&fit=crop"
+alt="Smart Grocery">
+
+<div class="project-content">
+
+<h3>Smart Grocery Inventory System</h3>
+
+<p>
+Developed an inventory management system
+to manage grocery products and stock efficiently.
+</p>
+
+<br>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements">
+
+<h1 class="title">Achievements</h1>
+
+<div class="skills-container">
+
+<div class="skill-card">
+
+<h2>Programming</h2>
+
+<p>
+
+Continuously improving programming skills by solving coding problems
+using Java, Python and C.
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>UI/UX Design</h2>
+
+<p>
+
+Designed responsive and modern user interfaces
+using Figma and Adobe XD.
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>Web Development</h2>
+
+<p>
+
+Built responsive portfolio websites and
+modern web applications.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section id="certifications">
+
+<h1 class="title">
+
+Certifications
+
+</h1>
+
+<div class="skills-container">
+
+<div class="skill-card">
+
+<h2>UI/UX Design Internship</h2>
+
+<p>
+
+Aspivox Technologies
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>Java Programming</h2>
+
+<p>
+
+Completed Java Programming Course
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>Python Programming</h2>
+
+<p>
+
+Completed Python Programming Course
+
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<h2>Web Development</h2>
+
+<p>
+
+HTML • CSS • JavaScript
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h1 class="title">
+
+Contact Me
+
+</h1>
+
+<div class="contact">
+
+<p>
+
+📧 Email :
+<a href="mailto:dkaviya69@gmail.com" style="color:#00f7ff; text-decoration:none;">
+dkaviya69@gmail.com
+</a>
+
+</p>
+
+<p>
+
+📱 Phone :
+<a href="tel:+917604890394" style="color:#00f7ff; text-decoration:none;">
++91 7604890394
+</a>
+
+</p>
+
+<p>
+
+📍 Tindivanam, Tamil Nadu
+
+</p>
+
+<div class="socials">
+
+<a href="https://github.com/Kaviya-K-Boop"
+target="_blank">
+
+GitHub
+
+</a>
+
+<a href="https://www.linkedin.com/in/kaviya-kannappan-7919403a3"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:#00f7ff;">
+
+Kaviya Kannappan
+
+</h2>
+
+<br>
+
+<p>
+
+Software Developer | Java Developer | Python Developer | UI/UX Designer
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 All Rights Reserved.
+
+</p>
+
+</footer>
+
+<button id="topBtn">
+
+⬆
+
+</button>
+
+<script>
+
+const text=[
+
+"Software Developer",
+
+"Java Developer",
+
+"Python Developer",
+
+"UI/UX Designer",
+
+"Problem Solver"
+
+];
+
+let count=0;
+let index=0;
+let currentText="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+
+count=0;
+
+}
+
+currentText=text[count];
+
+letter=currentText.slice(0,++index);
+
+document.getElementById("typing").textContent=letter;
+
+if(letter.length===currentText.length){
+
+count++;
+index=0;
+
+setTimeout(type,1200);
+
+}else{
+
+setTimeout(type,120);
+
+}
+
+})();
+
+const topBtn=document.getElementById("topBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+topBtn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+<style>
+
+#topBtn{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+display:none;
+
+padding:15px;
+
+border:none;
+
+border-radius:50%;
+
+background:#00f7ff;
+
+color:black;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:0 0 20px #00f7ff;
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+</style>
 
 </body>
 
